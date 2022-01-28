@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  php:
+    build:
+      context: docker/php
+    ports:
+      - '19000:19000'
+    volumes:
+      - ./:/var/www/symfony
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - '8080:80'
+    volumes:
+      - ./:/var/www/symfony
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
