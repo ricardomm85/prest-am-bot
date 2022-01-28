@@ -12,6 +12,7 @@ provider:
   environment:
     # Symfony environment variables
     APP_ENV: prod
+    APP_SECRET: ${ssm:/remember/app-secret}
 
 plugins:
   - ./vendor/bref/bref

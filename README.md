@@ -10,4 +10,14 @@ docker-compose exec php /bin/bash
 https://9prqejzhz3.execute-api.us-east-1.amazonaws.com/
 
 
+# DEPLOY
 composer install --prefer-dist --optimize-autoloader --no-dev && serverless deploy
+
+# ENV Variables
+aws ssm put-parameter --region us-east-1 --name '/remember/my-parameter' --type String --value 'mysecretvalue'
+```
+    provider:
+        # ...
+        environment:
+            MY_PARAMETER: ${ssm:/remember/my-parameter}
+```
