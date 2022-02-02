@@ -1,5 +1,4 @@
 App\Controller\WebhookController:
-  public: true
   arguments:
     - '@logger'
     - 'TgBotApi\BotApiBase\WebhookFetcher'

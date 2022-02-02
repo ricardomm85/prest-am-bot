@@ -1,4 +1,3 @@
 App\Controller\HomeController:
-  public: true
   arguments:
     - '@TgBotApi\BotApiBase\BotApiComplete'
