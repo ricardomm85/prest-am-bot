@@ -13,6 +13,9 @@ https://9prqejzhz3.execute-api.us-east-1.amazonaws.com/
 # DEPLOY
 composer install --prefer-dist --optimize-autoloader --no-dev && serverless deploy
 
+# LOGS
+serverless logs -f web --tail
+
 # ENV Variables
 aws ssm put-parameter --region us-east-1 --name '/prest-am-bot/my-parameter' --type String --value 'mysecretvalue' --profile ricardo
 ```
