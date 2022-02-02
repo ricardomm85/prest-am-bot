@@ -6,6 +6,12 @@ kernel:
     resource: ../src/Kernel.php
     type: annotation
 
-app_lucky_number:
+home:
     path: /
     controller: App\Controller\HomeController
+    methods: GET
+
+webhook:
+    path: /webhook
+    controller: App\Controller\WebhookController
+    methods: POST

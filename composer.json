@@ -14,7 +14,8 @@
         "symfony/flex": "^2",
         "symfony/framework-bundle": "6.0.*",
         "symfony/runtime": "6.0.*",
-        "symfony/yaml": "6.0.*"
+        "symfony/yaml": "6.0.*",
+        "tg-bot-api/bot-api-base": "^1.7"
     },
     "config": {
         "allow-plugins": {
@@ -63,8 +64,7 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
-            "require": "6.0.*"
+            "allow-contrib": false
         }
     }
 }

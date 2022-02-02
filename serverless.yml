@@ -13,7 +13,7 @@ provider:
     # Symfony environment variables
     APP_ENV: prod
     APP_SECRET: ${ssm:/prest-am-bot/app-secret}
-    TELEGRAM_TOKEN: ${ssm:/prest-am-bot/telegram-token}
+    TG_BOT_API_KEY: ${ssm:/prest-am-bot/telegram-token}
 
 plugins:
   - ./vendor/bref/bref
